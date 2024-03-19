@@ -1,5 +1,5 @@
 import useSWR from 'swr'
-import axios from '@/lib/axios'
+import axios from '@/lib/laravelAxios'
 import { useEffect } from 'react'
 import { AxiosResponse } from 'axios'
 import { useRouter, useParams } from 'next/navigation'
@@ -32,10 +32,13 @@ export const useAuth = ({
   const csrf = () => axios.get('/sanctum/csrf-cookie')
 
   const register = async (data: {
-    name: string
+    clinic_name: string
+    img_path: string
+    clinic_id: string
     email: string
     password: string
     password_confirmation: string
+    clinic_path: string
   }) => {
     try {
       await csrf()
@@ -48,6 +51,7 @@ export const useAuth = ({
   }
 
   const login = async (data: {
+    clinic_id: string
     email: string
     password: string
     remember: boolean
@@ -104,7 +108,7 @@ export const useAuth = ({
       await axios.post('/logout').then(() => mutate())
     }
 
-    window.location.pathname = '/login'
+    window.location.pathname = '/admin/login'
   }
 
   useEffect(() => {

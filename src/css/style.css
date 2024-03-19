@@ -1,0 +1,166 @@
+body {
+    width: 100%;
+}
+main {
+    width: calc(100% - 360px);
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+.sidebar {
+    padding-top: 80px;
+    padding-left: 40px;
+    width: 360px;
+    background-color: #CCCCCC;
+    min-height: 100vh;
+}
+.nav_list {
+    margin-bottom: 40px;
+}
+.nav_list a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+th {
+    text-align: left;
+    padding: 20px 10px;
+    border: 1px solid #333;
+    background-color: #CCCCCC;
+}
+td.sub {
+    background-color: rgb(211, 250, 217);
+}
+td {
+    text-align: left;
+    padding: 20px 10px;
+    border: 1px solid #333;
+}
+
+.form_item {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.form_item label {
+    font-weight: bold;
+    font-size: 16px;
+}
+.form_item input {
+    width: 80%;
+}
+.form_item textarea {
+    width: 80%;
+}
+
+.create_button {
+    width: 300px;
+    background-color: #CCCCCC;
+    padding: 20px 10px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+.section {
+    width: 20%;
+    aspect-ratio: 5 / 6;
+    background-color: #CCCCCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.section svg {
+    font-size: 80px;
+}
+
+.dragging {
+    cursor: move;
+}
+.dragging.active {
+    cursor: move;
+    background-color: #eee;
+}
+
+.medical-root h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.sheet_item {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.medical_sheet-root {
+    width: 100%;
+    padding: 50px;
+}
+.medical_sheet-root h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.medical_sheet-root button {
+    display: block;
+    width: 30%;
+    min-width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    margin: 40px auto;
+    background-color: #CCCCCC;
+}
+
+.question_sheet {
+    width: 80%;
+    margin: auto;
+}
+.question_sheet .ttl {
+    font-size: 20px;
+}
+.question_sheet dl {
+    display: flex;
+    padding: 15px 10px;
+    border-bottom: dotted 1px #CCCCCC;
+}
+.question_sheet dt {
+    width: 40%;
+}
+.question_sheet dd {
+    width: 60%;
+}
+.question_sheet dd input {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.ragio_filed {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 767px) {
+    .question_sheet .ttl {
+        font-size:  18px;
+    }
+    .question_sheet {
+        width: 100%;
+    }
+    .question_sheet dl {
+        flex-direction: column;
+    }
+    .question_sheet dt {
+        width: 100%;
+    }
+    .question_sheet dd {
+        width: 100%;
+    }
+}
